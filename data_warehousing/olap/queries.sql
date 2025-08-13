@@ -17,20 +17,20 @@ ORDER BY
 
 -- Drill-down: Sales Details for a Particular Country
 SELECT
-    s.InvoiceNo,             -- Select the invoice number
-    s.CustomerID,            -- Select the customer ID
-    s.Quantity,              -- Select the quantity of items sold
-    s.UnitPrice,             -- Select the unit price of the items
-    s.TotalSales,            -- Select the total sales amount for each transaction
-    s.InvoiceDate            -- Select the date of the invoice
+    strftime('%Y', s.InvoiceDate) AS Year,           -- Extract year
+    strftime('%m', s.InvoiceDate) AS Month,          -- Extract month
+    SUM(s.TotalSales) AS TotalSales                  -- Aggregate total sales
 FROM
     sales_fact s
 JOIN
-    customer_dimension c ON s.CustomerID = c.CustomerID  -- Join with customer dimension to get the country
+    customer_dimension c ON s.CustomerID = c.CustomerID
 WHERE
-    c.Country = 'United Kingdom'  -- Specify the country ('UK' in this case, you can change it)
+    c.Country = 'United Kingdom'
+GROUP BY
+    strftime('%Y', s.InvoiceDate),                  -- Group by year
+    strftime('%m', s.InvoiceDate)                   -- Group by month
 ORDER BY
-    s.InvoiceDate;  -- Order the results by invoice date (chronologically)
+    Year ASC, Month ASC;                             -- Order chronologically
 
 
 -- Slice: Total Sales for a Particular Product Category
