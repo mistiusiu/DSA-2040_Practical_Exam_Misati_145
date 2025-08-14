@@ -160,7 +160,7 @@ If one doesn't want to install Google Chrome and they are on a Linux system the 
 plotly_get_chrome
 ```
 
-It should be noted that on Windows Subsytem for Linux (WSL) the full Linux modules and headers are not installed therefore the project will prompt the installation of the required packages via the package manager of the Linux distribution. It should be noted that some packages listed will be virtual packages supplied by other packages. This means that this method should be used by those who are comfortable with debugging package manager issues and are comfortable with the Unix terminal.
+It should be noted that on Windows Subsytem for Linux (WSL) the full Linux modules and headers are not installed therefore `kaleido` package in the notebook will prompt the installation of the required packages via the package manager of the Linux distribution. It should be noted that some packages listed will be virtual packages supplied by other packages. This means that this method should be used by those who are comfortable with debugging package manager issues and are comfortable with the Unix terminal.
 
 The report for the OLAP queries and analysis is [OLAP Report](./data_warehousing/olap/report.md)
 
