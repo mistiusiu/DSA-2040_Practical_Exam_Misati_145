@@ -4,7 +4,7 @@
 
 ### Affiliation
 
-![](./usiu_logo)
+![](usiu_logo.png)
 
 ### Directory Tree
 
@@ -135,21 +135,17 @@ The relevant notebook for the ETL is [ETL Retail](./data_warehousing/etl/etl_ret
 
 ![](./data_warehousing/etl/customer_dimension_table.png)
 
-
 #### Product Dimension Table
 
 ![](./data_warehousing/etl/product_dimension_table.png)
-
 
 #### Date Dimension Table
 
 ![](./data_warehousing/etl/date_dimension_table.png)
 
-
 #### Sales Fact Table
 
 ![](./data_warehousing/etl/sales_fact_table.png)
-
 
 These images have their corresponding `.csv` files for viewing in a spreadsheet.
 
@@ -260,4 +256,3 @@ The association rules derived from the synthetic dataset (`seed = 123`) show a s
 The second rule — “milk → chocolate” — also has 20% **support** but with 100% **confidence**, meaning that in this dataset, every transaction containing milk also contains chocolate. The **lift** remains 3.33, reinforcing the strong positive association.
 
 While these patterns suggest a close link between the two products, it’s important to note that the data here is *synthetic*, so the relationships may not reflect real-world consumer behaviour. In practice, such rules could be used for **cross-promotions** (e.g., bundling chocolate and milk), targeted marketing, or store layout optimisation to increase sales of related items.
-
