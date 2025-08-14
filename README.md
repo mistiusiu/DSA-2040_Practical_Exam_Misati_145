@@ -2,6 +2,10 @@
 
 ## Preamble
 
+### Affiliation
+
+![](./usiu_logo)
+
 ### Directory Tree
 
 Use the following directory tree to locate the Jupyter Notebooks, CSV files and Visualisations.
@@ -52,6 +56,7 @@ data_warehousing
 README.md
 requirements.txt
 save_pip_requirements.sh
+usiu_logo.png
 ```
 
 ### Configuring the Python Environment
