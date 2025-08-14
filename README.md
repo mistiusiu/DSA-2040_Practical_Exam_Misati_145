@@ -152,7 +152,15 @@ These images have their corresponding `.csv` files for viewing in a spreadsheet.
 
 The relevant notebook for the OLAP visuals is [OLAP Visualisation](./data_warehousing/olap/olap_visualisation.ipynb).
 
-To run this notebook one must have chrome already preinstalled. Chrome enables `plotly` and `kaleido` to save visualisations. Failure to have this dependency will lead to errors.
+To run this notebook one must have the Google Chrome browser already preinstalled. Chrome enables `plotly` and `kaleido` to save visualisations. Failure to have this dependency will lead to errors.
+
+If one doesn't want to install Google Chrome and they are on a Linux system the following command will obtain a minimised version of Chrome.
+
+```bash
+plotly_get_chrome
+```
+
+It should be noted that on Windows Subsytem for Linux (WSL) the full Linux modules and headers are not installed therefore the project will prompt the installation of the required packages via the package manager of the Linux distribution. It should be noted that some packages listed will be virtual packages supplied by other packages. This means that this method should be used by those who are comfortable with debugging package manager issues and are comfortable with the Unix terminal.
 
 The report for the OLAP queries and analysis is [OLAP Report](./data_warehousing/olap/report.md)
 
