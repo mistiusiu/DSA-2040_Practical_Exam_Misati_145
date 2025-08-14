@@ -236,6 +236,12 @@ The frequent itemsets are obtained and the association rules mapped out. The ana
 
 ##### Analysis
 
+```
+   antecedents  consequents  support  confidence      lift
+0  (chocolate)       (milk)      0.2    0.666667  3.333333
+1       (milk)  (chocolate)      0.2    1.000000  3.333333
+```
+
 The association rules derived from the synthetic dataset (`seed = 123`) show a strong relationship between the purchase of *chocolate* and *milk*. The first rule — “chocolate → milk” — has a **support** of 0.2, meaning that 20% of all transactions contain both chocolate and milk. Its **confidence** is approximately 0.67, indicating that when chocolate is purchased, milk is also purchased about two-thirds of the time. The **lift** of 3.33 means that the likelihood of buying milk increases by more than three times when chocolate is purchased, compared to milk’s baseline purchase rate.
 
 The second rule — “milk → chocolate” — also has 20% **support** but with 100% **confidence**, meaning that in this dataset, every transaction containing milk also contains chocolate. The **lift** remains 3.33, reinforcing the strong positive association.
